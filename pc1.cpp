@@ -64,7 +64,7 @@ string checkExperience (char hasExperience) {
 	//CODE HERE
 	if(toupper(hasExperience) == 'Y')
 		return string("Welcome back");
-	else if (toupper(hasExperience) == 'N')
+	else
 		return string("Get ready to have some fun");
 }
 
