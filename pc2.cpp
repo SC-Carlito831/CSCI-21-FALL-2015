@@ -83,7 +83,7 @@ double launchHumanCannonball (double initialVelocity, double launchAngle) {
 	// 2 compute final horizontal/x velocity [xveloc = initialVelocity * cos(radangle)]
 	double xveloc = initialVelocity * cos(radangle);
 	// 3 compute final vertical/y velocity [yveloc = initialVecity * sin(radangle) * -1]
-	double yveloc = initialVelocityf * sin(radangle) * -1;
+	double yveloc = initialVelocity * sin(radangle) * -1;
 	// 4 compute time of flight [flighttime = (yveloc) * 2 / -9.8]
 	double flighttime = (yveloc) * 2 / -9.8;
 	// 5 compute horizontal/x distance traveled [xdistance = xveloc * flighttime]
