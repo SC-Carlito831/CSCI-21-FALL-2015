@@ -4,7 +4,7 @@
  * written by Carlos D. Escobedo
  * created Aug 27
  * 
- * References: 
+ * References: n/a 
  */
 #include <cassert>
 #include <iostream>
