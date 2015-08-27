@@ -1,5 +1,10 @@
 /*
  * Programming Challenge 3
+ *
+ * written by Carlos D. Escobedo
+ * created on 25 Aug
+ *
+ * References: StackOverflow.com for char to int
  */
 #include <cassert>
 #include <cmath>
@@ -124,7 +129,7 @@ int rockScissorPaper (char playerOne, char playerTwo) {
  * @return an int containing the ASCII value of the character
  */
 int asciiValue (char c) {
-	int cvalue = c;
+	return c;
 }
 
 /*

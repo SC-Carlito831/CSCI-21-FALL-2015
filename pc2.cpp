@@ -1,5 +1,10 @@
 /*
  * Programming Challenge 2
+ *
+ * written by Carlos D. Escobedo
+ * created on 25 Aug
+ * 
+ * References: Absolute C++ by Walter Savitch 
  */
 #include <cassert>
 #include <cmath>
@@ -79,7 +84,7 @@ double launchHumanCannonball (double initialVelocity, double launchAngle) {
 	// CODE HERE
 	//
 	// 1 convert launchAngle from degrees to radians [radangle = launchAngle * (PI/180)]
-	double radangle = launchAngle * (3.14/180);
+	double radangle = launchAngle * (PI/180);
 	// 2 compute final horizontal/x velocity [xveloc = initialVelocity * cos(radangle)]
 	double xveloc = initialVelocity * cos(radangle);
 	// 3 compute final vertical/y velocity [yveloc = initialVecity * sin(radangle) * -1]

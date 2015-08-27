@@ -1,5 +1,10 @@
 /*
  * Programming Challenge 4
+ *
+ * written by Carlos D. Escobedo
+ * created Aug 26
+ *
+ * References: Absolute C++ by Walter Savitch
  */
 #include <cassert>
 #include <cstdlib>
@@ -62,7 +67,7 @@ string makeString (string label, double value, char separator) {
  *         when value is length 0 or value is length > 1
  */
 char stringToChar (string value) {
-	if((value.length() > 1) || (value.length() == 0))
+	if((value.length() > 1) || (value.empty())
 		return '\0';
 	else
 		return value.at(0);
@@ -77,11 +82,15 @@ char stringToChar (string value) {
  * @return an integer representing the value, or 0 on failure
  */
 int stringToInt (string value) {
+	stringstream ss; 
+	int myInt;
 	for (int i = 0; i < value.length(); i++) {
-		if (!isdigit(value.at(i)))
+		if (value.empty() && !isdigit(value.at(i)))
 			return 0;
 	}
-	return atoi(value.c_str());
+	ss.str(value); 
+	ss >> myInt;
+	return myInt; 
 }
 
 /*
@@ -94,8 +103,10 @@ int stringToInt (string value) {
  */
 double stringToDouble (string value) {
 	int count = 0;
+	double myDouble; 
+	stringstream ss;
 	for (int i = 0; i < value.length(); i++) {
-		if (!isdigit(value.at(i)) && value.at(i) != '.') { 
+		if (value.empty() && !isdigit(value.at(i))) { 
 			return 0;
 		} else if (value.at(i) == '.') {
 			count++;
@@ -103,7 +114,9 @@ double stringToDouble (string value) {
 				return 0;
 		}
 	}
-	return atof(value.c_str());
+	ss.str(value); 
+	ss >> myDouble; 
+	return myDouble; 
 }
 
 
