@@ -39,3 +39,8 @@ pc6: pc6.cpp
 # Date completed: 9-2-2015
 pc7: pc7.cpp
 	g++ -o challenge-7 pc7.cpp
+
+# Target for programming challenge 8
+# Date completed: 9-2-2015
+pc8: pc8.cpp
+	g++ -o challenge-8 pc8.cpp
