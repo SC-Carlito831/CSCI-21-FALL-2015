@@ -60,17 +60,17 @@ void processArguments (int argc, char* argv[]) {
 		ss.str("");
 		ss << argv[i];
 		if(ss.str() == "50")
-			onFifty();
-		else if (ss.str() == "40")
+			onFifty ();
+		else if (ss.str () == "40")
 			onForty();
-		else if (ss.str() == "30")
+		else if (ss.str () == "30")
 			onThirty();
-		else if (ss.str() == "20")
+		else if (ss.str () == "20")
 			onTwenty();
-		else if (ss.str() == "10")
-			onTen();
+		else if (ss.str () == "10")
+			onTen ();
 		else
-			onError();
+			onError ();
 	}
 }
 
