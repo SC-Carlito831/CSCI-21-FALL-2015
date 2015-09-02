@@ -67,7 +67,7 @@ string makeString (string label, double value, char separator) {
  *         when value is length 0 or value is length > 1
  */
 char stringToChar (string value) {
-	if((value.length() > 1) || (value.empty())
+	if((value.length() > 1) || (value.empty()))
 		return '\0';
 	else
 		return value.at(0);

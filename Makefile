@@ -20,20 +20,17 @@ pc2: pc2.cpp
 pc3: pc3.cpp
 	g++ -o challenge-3 pc3.cpp
 	
-# Target for programming challenge 3
+# Target for programming challenge 4
 # Date completed: 9-1-2015
 pc4: pc4.cpp
 	g++ -o challenge-4 pc4.cpp
 	
-# Target for programming challenge 3
+# Target for programming challenge 5
 # Date completed: 9-1-2015
 pc5: pc5.cpp
 	g++ -o challenge-5 pc5.cpp
 
-# Target for programming challenge 3
+# Target for programming challenge 6
 # Date completed: 9-1-2015
 pc6: pc6.cpp
 	g++ -o challenge-6 pc6.cpp
-	
-clean:
-	rm *.o
