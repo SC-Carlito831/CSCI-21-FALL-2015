@@ -4,7 +4,8 @@
  * written by Carlos D. Escobedo
  * created 28 Aug
  *
- * References: cplusplus.com (Read from a .txt file)
+ * References: cplusplus.com (Read from a .txt file), Absolute C++, 
+ * StackOverflow.com (ifstream and string vars & read file line by line)
  */
 #include <cassert>
 #include <fstream>
@@ -53,12 +54,28 @@ int main (int argc, char* argv[]) {
 
 // CODE HERE -- FUNCTION DEFINITIONS
 bool processFile (string filename) {
-	ifstream readFile;
-	readFile.open(filename);
-	if (readFile.is_open)
+	string readNum;
+	ifstream inStream;
+	inStream.open(filename.c_str());
+	if (inStream.is_open()) {
+		while(getline(inStream, readNum)) {
+			if (readNum == "50")
+				onFifty ();
+			else if (readNum == "40")
+				onForty ();
+			else if (readNum == "30")
+				onThirty ();
+			else if (readNum == "20")
+				onTwenty ();
+			else if (readNum == "10")
+				onTen ();
+			else
+				onError ();
+		}	
 		return true;
-	else 
+	} else {
 		return false;
+	}
 }
 
 /*
