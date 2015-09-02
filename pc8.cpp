@@ -53,7 +53,7 @@ int main (int argc, char* argv[]) {
 	return 0;
 }
 
-// CODE HERE -- FUNCTION DEFINITIONS
+// CODE HERE -- FUNCTION
 void processArguments (int argc, char* argv[]) {
 	stringstream ss;
 	for (int i = 1; i < argc; i++) {
