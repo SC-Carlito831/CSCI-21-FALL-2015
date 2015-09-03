@@ -112,6 +112,8 @@ double stringToDouble (string value) {
 			count++;
 			if (count > 1)
 				return 0;
+		} else if((i == value.length() - 1) && (count == 0)){
+			return 0;
 		}
 	}
 	ss.str(value); 
