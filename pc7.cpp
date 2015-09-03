@@ -71,7 +71,8 @@ bool processFile (string filename) {
 				onTen ();
 			else
 				onError ();
-		}	
+		}
+		inStream.close();
 		return true;
 	} else {
 		return false;
