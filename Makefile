@@ -50,3 +50,8 @@ pc8: pc8.cpp
 project1: project1.cpp
 	g++ -o project-1 project1.cpp
 	
+# Target for programming challenge-9
+# Date completed: 9-2-2015
+pc9: pc9.cpp
+	g++ -o challenge-9 pc9.cpp
+	
