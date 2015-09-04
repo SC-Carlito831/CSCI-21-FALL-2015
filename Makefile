@@ -51,7 +51,11 @@ project1: project1.cpp
 	g++ -o project-1 project1.cpp
 	
 # Target for programming challenge-9
-# Date completed: 9-2-2015
+# Date completed: 9-3-2015
 pc9: pc9.cpp
 	g++ -o challenge-9 pc9.cpp
 	
+# Target for programming challenge-10
+# Date completed: 9-3-2015
+pc10: pc10.cpp
+	g++ -o challenge-10 pc10.cpp
