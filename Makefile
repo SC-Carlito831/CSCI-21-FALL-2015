@@ -59,3 +59,8 @@ pc9: pc9.cpp
 # Date completed: 9-3-2015
 pc10: pc10.cpp
 	g++ -o challenge-10 pc10.cpp
+	
+# Target for programming challenge-11
+# Date completed: 9-4-2015
+pc11: pc11.cpp
+	g++ -o challenge-11 pc11.cpp
