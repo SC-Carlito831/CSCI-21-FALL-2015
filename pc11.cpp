@@ -1,5 +1,11 @@
 /*
  * Programming Challenge 11
+ *
+ * written by Carlos D. Escobedo
+ * created 6 sep
+ * last modified 29 sep
+ *
+ * References: Boyd Trolinger
  */
 #include <cassert>
 #include <iomanip>
@@ -34,7 +40,7 @@ class Prize
 		 * Get this Prize's value
 		 * @return an unsigned int containing this Prize's value
 		 */
-		 unsigned int getPrize ();
+		 unsigned int getValue ();
 		
 	private:
 	
@@ -53,12 +59,13 @@ class SecretDoor
 		// CODE HERE -- DECLARE FUNCTIONS
 	
 		/*
-		 * Constructor.
+		 * Cons
+		 tructor.
 		 * @param newNumber unsigned int containing a value for this SecretDoor's number; default argument is 1
 		 * @param newPrize Prize containing a Prize that is "hidden" behind this secret door; default argument 
 		 *        is Prize()
 		 */
-		 void constructor (unsigned int newNumber = 1, Prize newPrize = Prize());
+		 SecretDoor (unsigned int newNumber = 1, Prize newPrize = Prize());
 		
 		/*
 		 * Get this SecretDoor's number.
@@ -70,7 +77,7 @@ class SecretDoor
 		 * Get this SecretDoor's Prize.
 		 * @return the Prize, by reference, "hidden behind" this SecretDoor
 		 */
-		 unsigned int getPrize();
+		 Prize getPrize();
 		
 	private:
 	
@@ -90,20 +97,26 @@ int main (int argc, char* argv[]) {
 }
 
 // CODE HERE -- FUNCTION DEFINITIONS FOR PRIZE; USE INITIALIZER SECTION FOR CONSTRUCTOR
-void Prize::Prize (string newName, unsigned int newValue) {
-	name = newName;
+Prize::Prize (string newName, unsigned int newValue) {
 	value = newValue;
+	name = newName;
+	if (newValue > 100) {
+		for (int i = 0; i < name.length(); i++) {
+			name.at(i) = toupper(name.at(i));
+		}
+		name = name + "!";
+	}
 }
 
 string Prize::getName ( ) {
 	return name;
 }
 
-unsigned int Prize::getPrize () {
+unsigned int Prize::getValue () {
 	return value;
 }
 // CODE HERE -- FUNCTION DEFINITIONS FOR SECRETDOOR; USE INITIALIZER SECTION FOR CONSTRUCTOR
-void SecretDoor::constructor (unsigned int newNumber, Prize newPrize) {
+SecretDoor::SecretDoor (unsigned int newNumber, Prize newPrize) {
 	number = newNumber;
 	prize = newPrize;
 	
@@ -113,8 +126,8 @@ unsigned int SecretDoor::getNumber () {
 	return number;
 }
 
-unsigned int SecretDoor::getPrize () {
-	return prize&;
+Prize SecretDoor::getPrize () {
+	return prize;
 }
 
 /*
