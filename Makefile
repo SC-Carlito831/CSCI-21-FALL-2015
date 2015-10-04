@@ -65,8 +65,27 @@ pc10: pc10.cpp
 pc11: pc11.cpp
 	g++ -o challenge-11 pc11.cpp
 	
-# Target for programming challenge-11
+# Target for programming challenge-12
 # Date completed: 9-29-2015
 pc12: pc12.cpp
 	g++ -o challenge-12 pc12.cpp
 	
+# Target for programming challenge-13
+# Date completed: 9-29-2015
+pc13: pc13.cpp
+	g++ -o challenge-13 pc13.cpp
+	
+# Target for programming challenge-14
+# Date completed: 9-30-2015
+pc14: pc14.cpp
+	g++ -o challenge-14 pc14.cpp
+
+# Target for programming challenge-15
+# Date completed: 10-3-2015
+pc15: pc15.cpp
+	g++ -o challenge-15 pc15.cpp
+	
+# Target for programming project1
+# Date completed: 9-30-2015
+project2: project2.cpp
+	g++ -o project-2 project2.cpp
